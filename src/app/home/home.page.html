@@ -1,38 +1,66 @@
 <ion-content [fullscreen]="true" class="main">
-	<h1>RetroFolio</h1>
-	<div class="center intro">
+	<div class="header top">
+		<div class="first"></div>
+		<h1>RetroFolio</h1>
+		<div class="last"></div>
+	</div>
+	<div class="center intro" style="text-align: left">
 		<p>Welcome!</p>
 		<p>I'm Osman, but I usually go by Retropaint online. Say hi if you meet me!</p>
 		<br>
-		<p>I like to write random words and symbols that do stuff. I think it's called programming. My fields of interest are primarily in building native apps, but I've worked extensively with web technology and am no slouch at it!</p> </div>
+		<p>I like to write random words and symbols that do stuff. I think it's called programming.<br> My fields of interest are primarily in building native apps, both low-level (C, C++, etc) to high-level (web tech).</p> 
+	</div>
 	
-	<h2 class="work-experience-header">Work Experience</h2>
-
+	<div class="header">
+		<div class="first"></div>
+		<h2>Work Experience</h2>
+		<div class="last"></div>
+	</div>
 	<div class="center work-experience">
-		<ul>
-			<li>
+		<div class="stampede">
+			<div class="text">
 				<h3><a href="https://stampede-design.com" target="_blank">Stampede Design</a></h3>
 				<p>Over at my first job, I worked as a Frontend Developer.</p>
-			</li>
-		</ul>
+			</div>
+			<ion-img class="icon" src="assets/stampede.png"></ion-img>
+		</div>
 	</div>
 
-	<h2>Projects</h2>
+	<div class="header">
+		<div class="first"></div>
+		<h2>Projects of Interest</h2>
+		<div class="last"></div>
+	</div>
 	<div class="center project-container">
-		<ul>
-			<li><a>asciiPainter</a></li>
-			<li><a>Simple 3D Renderer</a></li>
-			<li><a>Azur Lane Fleet Tech Tracker</a></li>
-		</ul>
+		<a>asciiPainter</a>
+		<br>
+		<a>Simple 3D Renderer</a>
+		<br>
+		<a>Azur Lane Fleet Tech Tracker</a>
 	</div>
 
-	<h2>Other Expertise</h2>
+	<div class="header">
+		<div class="first"></div>
+		<h2>Other Expertise</h2>
+		<div class="last"></div>
+	</div>
 	<div class="center">
-		<ion-button id="laravel-tooltip">Laravel</ion-button>
-		<ion-button id="docker-tooltip">Docker</ion-button>
+		<div class="expertise-icon">
+			<ion-img id="laravel-tooltip" src="assets/laravel.png"></ion-img>
+		</div>
+		<div class="expertise-icon">
+			<ion-img id="docker-tooltip" src="assets/laravel.png"></ion-img>
+		</div>
+		<div class="expertise-icon">
+			<ion-img id="laravel-tooltip" src="assets/laravel.png"></ion-img>
+		</div>
 	</div>
 
-	<h2>Contacts</h2>
+	<div class="header">
+		<div class="first"></div>
+		<h2>Contacts</h2>
+		<div class="last"></div>
+	</div>	
 	<div class="center contacts">
 		<p>Get in touch!</p>
 		<ul>
@@ -48,7 +76,7 @@
 		<ng-template>
 			<ion-content>
 				<ion-card>
-					<p>I've been trained to use Laravel as the backend framework at Stampede, and can comfortably use it for small-scale projects, or prototypes.</p>
+					<p>I've been trained on Laravel (and other relevant tech like PHP and MySQL) as the backend framework at Stampede, and can comfortably use it for small-scale projects, or prototypes.</p>
 				</ion-card>
 			</ion-content>
 		</ng-template>

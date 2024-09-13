@@ -29,8 +29,42 @@ ul {
 	}
 }
 
-h1, h2 {
-	text-align: center;
+.header {
+	width: 50%;
+	margin: 50px auto 12px auto;
+	display: flex;
+	align-items: center;
+
+	&.top {
+		margin-top: 20px;
+
+		.first {
+			height: 10px;
+		}
+		.last {
+			height: 10px;
+		}
+	}
+
+	.first {
+		height: 5px;
+		width: 50px;
+		background: linear-gradient(to right, transparent, rgba(96, 87, 254, 0.46));
+		display: inline-block;
+	}
+
+	h1, h2 {
+		display: inline-block;
+		margin: auto 10px auto 10px;
+		white-space: pre;
+	}
+
+	.last {
+		height: 5px;
+		width: 100%;
+		background: linear-gradient(to right, rgba(96, 87, 254, 0.46), transparent);
+		display: inline-block;
+	}
 }
 
 .work-experience-header {
@@ -45,8 +79,36 @@ h1, h2 {
 	margin: auto;
 }
 
-.contacts {
-	text-align: center;
+.stampede {
+	display: flex;
+	justify-content: space-between;
+	
+	h3 {
+		margin-top: 0px;
+	}
+
+	.text {
+		text-align: left;
+	}
+
+	.icon {
+		width: 100px;
+	}
+}
+
+.expertise-icon {
+	width: 50px;
+	cursor: pointer;
+	
+	ion-img {
+		transition: transform 0.1s linear;
+	}
+
+	&:hover {
+		ion-img {
+			transform: translateY(-3px);
+		}
+	}
 }
 
 ion-popover { 
@@ -54,10 +116,11 @@ ion-popover {
 	--background: transparent;
 
 	ion-card {
-		margin: 0;
 		--background: #12123cf2;
+		margin: 0;
 	 	border: 2px solid rgb(149, 149, 148);
 	 	padding: 10px;
+		color: white
 	}	
 
 	ion-content {
