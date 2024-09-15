@@ -33,7 +33,7 @@ p {
 }
 
 h3 {
-	font-size: 20px;
+	font-size: 17px;
 }
 
 .header {
@@ -97,7 +97,7 @@ h3 {
 	text-align: center;
 }
 
-.project-container {
+.projects {
 	position: relative;
 	margin: auto;
 	display: flex;
@@ -107,26 +107,40 @@ h3 {
 .project {
 	width: 32%;
 	cursor: pointer;
-	
+
 	ion-img {
-		width: 75%;
 		margin: auto;
+		height: 100px;
+
+		&.crisp { 
+			filter: contrast(100);
+		}
 	}
 
 	p {
 		font-size: 13px;
 	}
 
-	.container {
-		background: black;
+	a {
+		text-decoration: none;
+		color: white;
+	}
+
+	.project-container {
+		background: #12123cf2;
 		border: 2px solid rgb(149, 149, 148);
 		padding: 15px;
 		display: inline-block;
 		transition: transform 0.1s linear;
+		height: 100%;
+	}
+
+	&.middle {
+		margin: 0px 15px 0px 15px;
 	}
 
 	&:hover {
-		.container {
+		.project-container {
 			transform: translateY(-3px);
 		}
 	}
