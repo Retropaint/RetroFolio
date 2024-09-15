@@ -1,3 +1,9 @@
-<p>
-  expertise-popover works!
-</p>
+<ion-popover [trigger]="trigger" side="top" alignment="center">
+	<ng-template>
+		<ion-content>
+			<ion-card>
+				<p>{{content}}</p>
+			</ion-card>
+		</ion-content>
+	</ng-template>
+</ion-popover>

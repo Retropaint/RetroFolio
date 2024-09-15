@@ -69,6 +69,9 @@
 		<div class="expertise-icon">
 			<ion-img id="docker-tooltip" src="assets/docker.png" title="Docker"></ion-img>
 		</div>
+		<div class="expertise-icon">
+			<ion-img id="python-tooltip" src="assets/python.png" title="Python"></ion-img>
+		</div>
 	</div>
 
 	<div class="header">
@@ -85,23 +88,18 @@
 		</a>
 	</div>
 
-	<ion-popover trigger="laravel-tooltip" side="top" alignment="center">
-		<ng-template>
-			<ion-content>
-				<ion-card>
-					<p>I learnt Laravel (and other relevant tech like PHP and MySQL) as the backend framework at Stampede, and can comfortably use it for small-scale projects, or prototypes.</p>
-				</ion-card>
-			</ion-content>
-		</ng-template>
-	</ion-popover>
+	<app-expertise-popover 
+		trigger="laravel-tooltip" 
+		content="I learnt Laravel (and other relevant tech like PHP and MySQL) as the backend framework at Stampede, and can comfortably use it for small-scale projects, or prototypes."
+	></app-expertise-popover>
 
-	<ion-popover trigger="docker-tooltip" side="top" alignment="center">
-		<ng-template>
-			<ion-content>
-				<ion-card>
-					<p>Thanks to a PHP version conflict, I was introduced to Docker. In particular, I learnt to use Docker Compose for multi-container setups, and always prefer to use it for production.</p>
-				</ion-card>
-			</ion-content>
-		</ng-template>
-	</ion-popover>
+	<app-expertise-popover 
+		trigger="docker-tooltip" 
+		content="Thanks to a PHP version conflict, I was introduced to Docker. In particular, I learnt to use Docker Compose for multi-container setups, and always prefer to use it for production."
+	></app-expertise-popover>
+
+	<app-expertise-popover 
+		trigger="python-tooltip" 
+		content="I like using Python for quick scripts and high-level nature (not worrying about segfaults and all that low-level crap)."
+	></app-expertise-popover>
 </ion-content>
