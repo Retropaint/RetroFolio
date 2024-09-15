@@ -29,15 +29,11 @@ $medium: 800px;
 
 p {
 	margin: 0;
+	font-size: 15px;
 }
 
-ul {
-	padding: 0;
-	
-	li {
-		text-align: left;
-		list-style-type: none;
-	}
+h3 {
+	font-size: 20px;
 }
 
 .header {
@@ -104,16 +100,47 @@ ul {
 .project-container {
 	position: relative;
 	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.project {
+	width: 32%;
+	cursor: pointer;
+	
+	ion-img {
+		width: 75%;
+		margin: auto;
+	}
+
+	p {
+		font-size: 13px;
+	}
+
+	.container {
+		background: black;
+		border: 2px solid rgb(149, 149, 148);
+		padding: 15px;
+		display: inline-block;
+		transition: transform 0.1s linear;
+	}
+
+	&:hover {
+		.container {
+			transform: translateY(-3px);
+		}
+	}
 }
 
 .stampede {
 	.stampede-header {
 		display: flex;
 		align-items: center;
-	}
-	
-	h3 {
-		margin: 12px 17px 12px 0px;
+
+		h3 {
+			margin: 12px 17px 12px 0px;
+			font-size: 19px;
+		}
 	}
 
 	.body {
@@ -125,9 +152,15 @@ ul {
 	}
 }
 
+.expertise {
+	display: flex;
+}
+
 .expertise-icon {
 	width: 50px;
 	cursor: pointer;
+	display: inline-block;
+	margin: auto 10px auto 10px;
 	
 	ion-img {
 		transition: transform 0.1s linear;
