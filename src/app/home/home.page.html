@@ -53,7 +53,7 @@
 
 	<div class="header">
 		<div class="first"></div>
-		<h2>Other Expertise</h2>
+		<h2>List of Expertise</h2>
 		<div class="last"></div>
 	</div>
 	<div class="center expertise">
@@ -86,7 +86,7 @@
 			<ng-template>
 				<ion-content>
 					<ion-card>
-						<p>{{exp.content}}</p>
+						<p [innerHTML]="exp.content"></p>
 					</ion-card>
 				</ion-content>
 			</ng-template>
