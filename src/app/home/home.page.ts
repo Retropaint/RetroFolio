@@ -12,6 +12,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomePage implements OnInit {
 	expertise: any;
+	projects: any;
 
 	constructor(
 		private http: HttpClient
@@ -20,9 +21,8 @@ export class HomePage implements OnInit {
 	ngOnInit() {
 		this.http.get('assets/data.json').subscribe((data: any) => {
 			this.expertise = data.expertise;
+			this.projects = data.projects;
+			console.log(this.projects);
 		})
-	}
-
-	async openPopover(e: Event) {
 	}
 }
