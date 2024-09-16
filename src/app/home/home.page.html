@@ -71,11 +71,14 @@
 	</div>
 	<div class="center contacts">
 		<p class="subtitle">Get in touch!</p>
-		<a target="_blank" href="https://github.com/Retropaint">
-			<div class="expertise-icon">
-				<ion-img  src="assets/github.png"></ion-img>
-			</div>
-		</a>
+		
+		@for(contact of contacts; track $index) {
+			<a target="_blank" [href]="contact.link">
+				<div class="expertise-icon">
+					<ion-img  src="assets/contacts-icons/{{$index}}.png"></ion-img>
+				</div>
+			</a>
+		}
 	</div>
 	
 	@for(exp of expertise; track exp.name) {

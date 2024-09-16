@@ -1,7 +1,7 @@
 {
-	"projects": [
-		{
-			"name": "asciiPainter",
+	"projects": [ 
+		{ 	
+			"name": "asciiPainter", 
 			"body": "A TTY program for ASCII art, made with ncurses/PDCurses. This came out of my growing obsession with terminals and CLIs.",
 			"link": "https://github.com/Retropaint/asciiPainter"
 		},
@@ -22,13 +22,18 @@
 			"content": "I learnt Laravel (and other relevant tech like PHP and MySQL) as the backend framework at Stampede, and can comfortably use it for small-scale projects, or prototypes."
 		},
 		{
-
 			"name": "Docker",
 			"content": "Thanks to a PHP version conflict, I was introduced to Docker. In particular, I learnt to use Docker Compose for multi-container setups, and always prefer to use it for production."
 		},
 		{
 			"name": "Python",
 			"content": "I like using Python for quick scripts and high-level nature (not worrying about segfaults and all that low-level crap)."
+		}
+	],
+	"contacts": [
+		{
+			"name": "Github",
+			"link": "https://github.com/Retropaint"
 		}
 	]
 }
