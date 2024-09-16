@@ -1,20 +1,27 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonPopover, IonButton, IonCard, IonImg } from '@ionic/angular/standalone';
-import { ExpertisePopoverComponent } from '../expertise-popover/expertise-popover.component';
- 
+import { HttpClient } from '@angular/common/http';
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonPopover, IonButton, IonCard, IonImg, ExpertisePopoverComponent],
+  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonPopover, IonButton, IonCard, IonImg],
+  providers: [HttpClient]
 })
-export class HomePage {
-	@ViewChild('expertise-popover') popover: any;
-	isPopoverOpen: boolean = false;
-	
+export class HomePage implements OnInit {
+	expertise: any;
+
 	constructor(
+		private http: HttpClient
 	) {}
+
+	ngOnInit() {
+		this.http.get('assets/data.json').subscribe((data: any) => {
+			this.expertise = data.expertise;
+		})
+	}
 
 	async openPopover(e: Event) {
 	}

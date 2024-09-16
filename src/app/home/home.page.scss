@@ -36,6 +36,23 @@ h3 {
 	font-size: 17px;
 }
 
+ion-popover { 
+	--offset-y: -10px;
+	--background: transparent;
+
+	ion-card {
+		--background: #12123cf2;
+		margin: 0;
+	 	border: 2px solid rgb(149, 149, 148);
+	 	padding: 10px;
+		color: white
+	}	
+
+	ion-content {
+		--background: transparent;
+	}
+}
+
 .header {
 	@media screen and (max-width: $medium) {
 		padding: 0 15% 0 15%;
