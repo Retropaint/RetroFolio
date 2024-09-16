@@ -1,5 +1,6 @@
 $small: 600px;
-$medium: 800px;
+$medium: 1279px;
+$horProject: 820px;
 
 .main {
 	--background: linear-gradient(140deg, rgb(36, 36, 98), rgb(5, 0, 24));
@@ -115,6 +116,9 @@ ion-popover {
 }
 
 .projects {
+	@media screen and (max-width: $horProject) {
+		display: block;
+	}
 	position: relative;
 	margin: auto;
 	display: flex;
@@ -122,6 +126,11 @@ ion-popover {
 }
 
 .project {
+	@media screen and (max-width: $horProject) {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
 	width: 32%;
 	cursor: pointer;
 
@@ -188,7 +197,7 @@ ion-popover {
 }
 
 .expertise-icon {
-	width: 50px;
+	width: 40px;
 	cursor: pointer;
 	display: inline-block;
 	margin: auto 10px auto 10px;
