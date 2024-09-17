@@ -58,7 +58,7 @@
 	</div>
 	<div class="center expertise">
 		@for(exp of expertise; track $index) {
-			<div class="expertise-icon">
+			<div class="expertise-icon {{exp.name}}">
 				<ion-img id="{{exp.name}}-tooltip" src="assets/expertise-icons/{{exp.name}}.png" title="{{exp.name}}"></ion-img>
 			</div>
 		}

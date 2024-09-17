@@ -211,6 +211,14 @@ ion-popover {
 			transform: translateY(-3px);
 		}
 	}
+
+	&.Docker {
+		width: 45px;
+	}
+
+	&.Dialogflow {
+		width: 35px;
+	}
 }
 
 .contacts {
@@ -218,5 +226,3 @@ ion-popover {
 		margin-bottom: 10px;
 	}
 }
-
-
