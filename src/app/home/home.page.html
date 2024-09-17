@@ -43,7 +43,7 @@
 		@for(project of projects; track $index) {
 			<div class="project">
 				<a class="project-container" [href]="project.link" target="_blank">
-					<ion-img class="{{project.name}}" src="assets/project-thumbnails/{{$index}}.png"></ion-img>
+					<ion-img class="{{project.name}}" src="assets/project-thumbnails/{{project.name}}.png"></ion-img>
 					<h3>{{project.name}}</h3>
 					<p>{{project.body}}</p>
 				</a>
@@ -59,7 +59,7 @@
 	<div class="center expertise">
 		@for(exp of expertise; track $index) {
 			<div class="expertise-icon">
-				<ion-img id="{{exp.name}}-tooltip" src="assets/expertise-icons/{{$index}}.png" title="{{exp.name}}"></ion-img>
+				<ion-img id="{{exp.name}}-tooltip" src="assets/expertise-icons/{{exp.name}}.png" title="{{exp.name}}"></ion-img>
 			</div>
 		}
 	</div>
@@ -75,7 +75,7 @@
 		@for(contact of contacts; track $index) {
 			<a target="_blank" [href]="contact.link">
 				<div class="expertise-icon">
-					<ion-img  src="assets/contacts-icons/{{$index}}.png"></ion-img>
+					<ion-img  src="assets/contacts-icons/{{contact.name}}.png"></ion-img>
 				</div>
 			</a>
 		}
