@@ -3,6 +3,9 @@ $medium: 1279px;
 $horProject: 820px;
 
 .main {
+	--ion-text-color: #ffffff;
+	--ion-color-primary: #428cff;
+
 	--background: linear-gradient(140deg, rgb(36, 36, 98), rgb(5, 0, 24));
 	@media screen and (max-width: $medium) {
 		font-size: 14px;

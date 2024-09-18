@@ -20,6 +20,7 @@ export class HomePage implements OnInit {
 	) {}
 
 	ngOnInit() {
+		document.body.classList.toggle('dark', false);
 		this.http.get('assets/data.json').subscribe((data: any) => {
 			this.expertise = data.expertise;
 			this.projects = data.projects;
