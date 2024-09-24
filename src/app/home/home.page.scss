@@ -195,11 +195,11 @@ ion-popover {
 	}
 }
 
-.expertise {
+.icons {
 	display: flex;
 }
 
-.expertise-icon {
+.icon {
 	width: 40px;
 	cursor: pointer;
 	display: inline-block;
@@ -221,6 +221,10 @@ ion-popover {
 
 	&.Dialogflow {
 		width: 35px;
+	}
+
+	&.Discord {
+		margin: auto 10px 5px 10px
 	}
 }
 

@@ -56,9 +56,9 @@
 		<h2>Expertise & Experience</h2>
 		<div class="last"></div>
 	</div>
-	<div class="center expertise">
+	<div class="center icons">
 		@for(exp of expertise; track $index) {
-			<div class="expertise-icon {{exp.name}}">
+			<div class="icon {{exp.name}}">
 				<ion-img id="{{exp.name}}-tooltip" src="assets/expertise-icons/{{exp.name}}.png" title="{{exp.name}}"></ion-img>
 			</div>
 		}
@@ -72,13 +72,21 @@
 	<div class="center contacts">
 		<p class="subtitle">Get in touch!</p>
 		
-		@for(contact of contacts; track $index) {
-			<a target="_blank" [href]="contact.link">
-				<div class="expertise-icon">
-					<ion-img  src="assets/contacts-icons/{{contact.name}}.png"></ion-img>
-				</div>
-			</a>
-		}
+		<div class="expertise">
+			@for(contact of contacts; track $index) {
+				@if(contact.link) {
+					<a target="_blank" [href]="contact.link">
+						<div class="icon {{contact.name}}">
+							<ion-img id="{{contact.name}}-tooltip" src="assets/contacts-icons/{{contact.name}}.png"></ion-img>
+						</div>
+					</a>
+				} @else {
+					<div class="icon {{contact.name}}">
+						<ion-img id="{{contact.name}}-tooltip" src="assets/contacts-icons/{{contact.name}}.png"></ion-img>
+					</div>
+				}
+			}
+		</div>
 	</div>
 	
 	@for(exp of expertise; track exp.name) {
@@ -91,5 +99,19 @@
 				</ion-content>
 			</ng-template>
 		</ion-popover>
+	} 
+
+ 	@for(contact of contacts; track contact.name) {
+		@if(contact.content) {
+			<ion-popover trigger="{{contact.name}}-tooltip" side="top" alignment="center">
+				<ng-template>
+					<ion-content>
+						<ion-card>
+							<p [innerHTML]="contact.content"></p>
+						</ion-card>
+					</ion-content>
+				</ng-template>
+			</ion-popover>
+		}
 	}
 </ion-content>
