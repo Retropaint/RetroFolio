@@ -88,7 +88,16 @@
 			}
 		</div>
 	</div>
-	
+
+	<div class="header">
+		<div class="first"></div>
+		<h2>Miscellaneous</h2>
+		<div class="last"></div>
+	</div>
+	<div class="center last-section">
+		<p>View/Download my <a href="assets/cv.pdf">CV</a> (PDF)</p>
+	</div>
+
 	@for(exp of expertise; track exp.name) {
 		<ion-popover trigger="{{exp.name}}-tooltip" side="top" alignment="center">
 			<ng-template>
