@@ -48,6 +48,14 @@
 		{
 			"name": "CMake",
 			"content": "I didn't want to deal with Visual Studio, so I found CMake as the defacto 'multi-platform' build system. When I transitioned to Mac, I stuck with it to develop asciiPainter as my first multi-platform project."
+		},
+		{
+			"name": "Go",
+			"content": "After contributing to a project built with Go, I found it to be the best of many worlds between compiled language robustness and dynamic language simplicty. It has quickly become one of my favourite languages, and is a decent option when picking one for any project."
+		},
+		{
+			"name": "Linux",
+			"content": "FOSS FTW! Aside from MacOS, I use Arch Linux as my main operating system. Occasionally I try out other Linux distrobutions, but Arch is what I always come back to. Maybe I'll try out BSD someday!"
 		}
 	],
 	"contacts": [
