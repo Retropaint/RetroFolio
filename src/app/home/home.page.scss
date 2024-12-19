@@ -195,15 +195,11 @@ ion-popover {
 	}
 }
 
-.icons {
-	display: flex;
-}
-
 .icon {
 	width: 40px;
 	cursor: pointer;
 	display: inline-block;
-	margin: auto 10px auto 10px;
+	margin: 7px 10px 7px 10px;
 	
 	ion-img {
 		transition: transform 0.1s linear;
