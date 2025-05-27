@@ -45,7 +45,7 @@
 				<a class="project-container" [href]="project.link" target="_blank">
 					<ion-img class="{{project.name}}" src="assets/project-thumbnails/{{project.name}}.png"></ion-img>
 					<h3>{{project.name}}</h3>
-					<p>{{project.body}}</p>
+					<p [innerHTML]="project.body"></p>
 				</a>
 			</div>
 		}
