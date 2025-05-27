@@ -1,7 +1,7 @@
 {
-	"projects": [ 
-		{ 	
-			"name": "asciiPainter", 
+	"projects": [
+		{
+			"name": "asciiPainter",
 			"body": "A TTY program for ASCII art, made with ncurses/PDCurses. This came out of my growing obsession with terminals and CLIs.",
 			"link": "https://github.com/Retropaint/asciiPainter"
 		},
@@ -43,7 +43,7 @@
 		},
 		{
 			"name": "C++",
-			"content": "My favourite langauge(s)!! Dealing with segfaults and leaking 3-dimensional pointers are my PASTIME!!! <br><br> On a serious note, C++ is my go-to for developing native apps that aren't for web."
+			"content": "A former favourite language of mine. I've had a brief experience with it making a few hobby projects, but lack of a good official toolchain has made it fall off in favor of Rust for me."
 		},
 		{
 			"name": "CMake",
@@ -56,6 +56,10 @@
 		{
 			"name": "Linux",
 			"content": "FOSS FTW! Aside from MacOS, I use Arch Linux as my main operating system. Occasionally I try out other Linux distrobutions, but Arch is what I always come back to. Maybe I'll try out BSD someday!"
+		},
+		{
+			"name": "Rust",
+			"content": "My favourite systems level language! Memory management from compile-time and a very, very good official toolchain has made me stick with it to create my most ambitious project yet, SkelForm."
 		}
 	],
 	"contacts": [
