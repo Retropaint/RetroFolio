@@ -154,12 +154,6 @@ MIT
 
 @ionic/core/components
 
-@stencil/core/internal
-
-@stencil/core/internal/app-data
-
-@stencil/core/internal/client
-
 ionicons/components
 
 rxjs

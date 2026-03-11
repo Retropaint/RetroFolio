@@ -2,8 +2,8 @@
 	"projects": [
 		{
 			"name": "SkelForm",
-			"body": "A 2D animation editor, one that you can try out <a target='_blank' href='https://retropaint.github.io/skelform_web'>right now!</a>",
-			"link": "https://skelform.org/editor"
+			"body": "A 2D animation editor, one that you can try out <a target='_blank' href='https://skelform.org'>right now!</a>",
+			"link": "https://skelform.org"
 		},
 		{
 			"name": "3D Renderer",
@@ -24,14 +24,6 @@
 		{
 			"name": "Ionic",
 			"content": "A separate framework that can be used alongside Angular, Ionic is my go-to for mobile development and other useful stuff (UI components, CLI, capacitor plugins)."
-		},
-		{
-			"name": "Dialogflow",
-			"content": "For a prototype AI chatbot, I used Dialogfow to see if it would fit the bill. It ended up coming short due to some weird limitations, but it was fun to use for the time being and can work for simple chatbots (it was bad with dates, though)."
-		},
-		{
-			"name": "Laravel",
-			"content": "I learnt Laravel (and other relevant tech like PHP and MySQL) as the backend framework at Stampede, and can comfortably use it for small-scale projects, or prototypes."
 		},
 		{
 			"name": "Docker",
