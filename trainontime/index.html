@@ -1,0 +1,26 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Train on Time!</title>
+        <style>
+            html,
+            body,
+            canvas {
+                margin: auto;
+                margin-top: 25px;
+                width: 800px;
+                height: 600px;
+                background: black;
+                z-index: 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <canvas id="glcanvas" tabindex="1"></canvas>
+        <script src="./mqwasm.js"></script>
+        <script>
+            load("Train_on_Time.wasm");
+        </script>
+    </body>
+</html>
