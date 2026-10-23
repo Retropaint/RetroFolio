@@ -1,26 +1,168 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Train on Time!</title>
+        <title>Train: on Time!</title>
         <style>
             html,
-            body,
-            canvas {
+            body {
                 margin: auto;
-                margin-top: 25px;
-                width: 1280px;
-                height: 600px;
-                background: black;
+                width: 100vw;
+                aspect-ratio: 16/7.5;
+                background: #2c1b08;
                 z-index: 0;
+            }
+
+            @font-face {
+                font-family: NandakaWestern;
+                src: url(./nandaka_western.ttf);
+            }
+
+            @font-face {
+                font-family: KinakoMochi;
+                src: url(./kinako_mochi.ttf);
+            }
+
+            h1 {
+                font-family: KinakoMochi;
+                font-size: 48px;
+                color: #f3d319;
+                margin-top: 2rem;
+                text-align: center;
+                text-shadow:
+                    rgb(0, 0, 0) 4px 0px 0px,
+                    rgb(0, 0, 0) 3.87565px 0.989616px 0px,
+                    rgb(0, 0, 0) 3.51033px 1.9177px 0px,
+                    rgb(0, 0, 0) 2.92676px 2.72656px 0px,
+                    rgb(0, 0, 0) 2.16121px 3.36588px 0px,
+                    rgb(0, 0, 0) 1.26129px 3.79594px 0px,
+                    rgb(0, 0, 0) 0.282949px 3.98998px 0px,
+                    rgb(0, 0, 0) -0.712984px 3.93594px 0px,
+                    rgb(0, 0, 0) -1.66459px 3.63719px 0px,
+                    rgb(0, 0, 0) -2.51269px 3.11229px 0px,
+                    rgb(0, 0, 0) -3.20457px 2.39389px 0px,
+                    rgb(0, 0, 0) -3.69721px 1.52664px 0px,
+                    rgb(0, 0, 0) -3.95997px 0.56448px 0px,
+                    rgb(0, 0, 0) -3.97652px -0.432781px 0px,
+                    rgb(0, 0, 0) -3.74583px -1.40313px 0px,
+                    rgb(0, 0, 0) -3.28224px -2.28625px 0px,
+                    rgb(0, 0, 0) -2.61457px -3.02721px 0px,
+                    rgb(0, 0, 0) -1.78435px -3.57996px 0px,
+                    rgb(0, 0, 0) -0.843183px -3.91012px 0px,
+                    rgb(0, 0, 0) 0.150409px -3.99717px 0px,
+                    rgb(0, 0, 0) 1.13465px -3.8357px 0px,
+                    rgb(0, 0, 0) 2.04834px -3.43574px 0px,
+                    rgb(0, 0, 0) 2.83468px -2.82216px 0px,
+                    rgb(0, 0, 0) 3.44477px -2.03312px 0px,
+                    rgb(0, 0, 0) 3.84068px -1.11766px 0px,
+                    rgb(0, 0, 0) 3.9978px -0.132717px 0px;
+            }
+
+            .canvas-container {
+                text-align: center;
+
+                #glcanvas {
+                    &.desktop {
+                        margin: auto;
+                        width: 90vw;
+                        aspect-ratio: 16/7.5;
+                        background: black;
+                        z-index: 0;
+                    }
+
+                    &.mobile {
+                        margin: auto;
+                        width: 100vw;
+                        height: 100vh;
+                        background: black;
+                        z-index: 0;
+                    }
+                }
+            }
+
+            #fullscreenContainer {
+                font-size: 48px;
+                font-family: NandakaWestern;
+                margin-top: 1rem;
+                color: #ffed00;
+                height: 70%;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .button {
+                    cursor: pointer;
+                    margin: 0;
+                }
+
+                .mobile {
+                    color: #d9ca05;
+                    font-size: 24px;
+                }
             }
         </style>
     </head>
 
     <body>
-        <canvas id="glcanvas" tabindex="1"></canvas>
+        <h1 id="header">Train: on Time!</h1>
+        <div class="canvas-container">
+            <canvas
+                id="glcanvas"
+                tabindex="1"
+                width="30"
+                onclick="goFullscreen()"
+            ></canvas>
+        </div>
+        <div id="fullscreenContainer">
+            <p onclick="goFullscreen()" class="button">Tap here to play!</p>
+            <p class="mobile">The game will launch in landscape fullscreen</p>
+        </div>
+
         <script src="./mqwasm.js"></script>
         <script>
             load("Train_on_Time.wasm");
+
+            // https://medium.com/geekculture/detecting-mobile-vs-desktop-browsers-in-javascript-ad46e8d23ce5
+            function isMobile() {
+                return window.outerWidth < 720;
+                const regex =
+                    /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+                return regex.test(navigator.userAgent);
+            }
+
+            // forgor source :(
+            async function goFullscreen() {
+                if (!isMobile()) {
+                    return;
+                }
+
+                // disable all HTML elements, and enable canvas
+                fullscreenContainer.style.display = "none";
+                header.style.display = "none";
+                glcanvas.style.display = "block";
+
+                el = document.documentElement;
+                if (document.fullscreenEnabled) {
+                    el.requestFullscreen();
+                } else if (document.webkitFullscreenEnabled) {
+                    el.webkitRequestFullscreen();
+                } else if (document.mozFullScreenEnabled) {
+                    el.mozRequestFullScreen();
+                } else if (document.msFullscreenEnabled) {
+                    el.msRequestFullscreen();
+                }
+                await screen.orientation.lock("landscape");
+                window.scrollTo(0, document.body.scrollHeight);
+            }
+
+            if (!isMobile()) {
+                fullscreenContainer.style.display = "none";
+                glcanvas.classList.add("desktop");
+            } else {
+                glcanvas.style.display = "none";
+                glcanvas.classList.add("mobile");
+            }
         </script>
     </body>
 </html>
